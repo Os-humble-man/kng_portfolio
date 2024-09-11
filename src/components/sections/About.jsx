@@ -43,24 +43,14 @@ export default function About() {
           {/* Texte */}
           <div className="flex flex-col items-center lg:items-start text-textColor dark:text-darkText font-monserrat lg:w-1/2">
             <p className="w-full text-center lg:text-left text-base md:text-lg py-3">
-              Hi there! I'm [Your Name], a data scientist specializing in data
-              analytics, predictive modeling, natural language processing,
-              machine learning, and AI chatbots. With a passion for unraveling
-              insights from complex datasets, I'm dedicated to helping
-              businesses make informed decisions and stay ahead in today's
-              data-driven world.
+             Hi there! I'm Oscar Kanangila, a web developer specializing in creating dynamic, user-friendly, and efficient web applications. With a passion for solving technical challenges and delivering seamless digital experiences, I'm dedicated to helping businesses grow and thrive in today's digital landscape.
+
             </p>
             <p className="w-full text-center lg:text-left text-base md:text-lg py-3">
-              I bring a blend of technical expertise, hands-on experience, and a
-              commitment to clear communication to every project. Whether it's
-              uncovering hidden patterns, predicting future trends, or
-              automating processes with AI, I'm here to help you harness the
-              full potential of your data.
+              I bring a mix of technical expertise, hands-on experience, and a focus on clear communication to every project. Whether it's developing responsive websites, optimizing user interfaces, or streamlining backend processes, I'm here to help you unlock the full potential of your online presence.
             </p>
             <p className="w-full text-center lg:text-left text-base md:text-lg py-3">
-              Let's work together to transform your data into actionable
-              insights that drive real results. Get in touch, and let's start
-              unlocking the power of your data today!
+              Let's work together to build powerful web solutions that drive real impact. Reach out, and let's start bringing your vision to life today!
             </p>
           </div>
         </div>
