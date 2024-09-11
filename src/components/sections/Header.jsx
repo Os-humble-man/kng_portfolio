@@ -35,7 +35,7 @@ export default function Header() {
             <h2 className="font-bold text-2xl md:text-3xl flex items-center">
               <span className="dark:text-white text-textColor ">&lt;/</span>
               <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">
-                Mythe Coder
+               The Mythe
               </span>
               <span className="dark:text-white text-textColor">&gt;</span>
             </h2>
