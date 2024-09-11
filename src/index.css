@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: linear-gradient(to right, #3b82f6, #10b981);
+    transform-origin: 0%;
+  }
+  
+
+  
+  * {
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+  }
