@@ -25,7 +25,7 @@ export default {
       },
       backgroundImage: {
         'gradient-light': 'linear-gradient(to right, #00f, #0ff)',
-        'dark-image': "url('./src/assets/dark_background.jpg')",
+        'dark-image': "url('./dark_background.jpg')",
       },
     },
   },
