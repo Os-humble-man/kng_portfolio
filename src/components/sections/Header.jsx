@@ -41,10 +41,7 @@ export default function Header() {
             </h2>
 
             <p className="text-base md:text-lg lg:text-xl px-4 md:px-8 lg:px-16 py-3">
-              As a passionate data scientist, with expertise in machine
-              learning, AI, and data analytics, I thrive on the challenges of
-              exploring complex data landscapes and uncovering meaningful
-              patterns that drive innovation.
+              As a passionate web developer, I enjoy taking on technical challenges to design innovative and functional solutions. My expertise enables me to transform complex ideas into high-performance, intuitive web applications. Always striving to improve, I dedicate myself to optimizing user experiences and exploring new methods to continually enhance my skills.
             </p>
 
             <ScrollLayout>
