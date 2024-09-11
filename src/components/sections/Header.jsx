@@ -41,7 +41,7 @@ export default function Header() {
             </h2>
 
             <p className="text-base md:text-lg lg:text-xl px-4 md:px-8 lg:px-16 py-3">
-              As a passionate web developer, I enjoy taking on technical challenges to design innovative and functional solutions. My expertise enables me to transform complex ideas into high-performance, intuitive web applications. Always striving to improve, I dedicate myself to optimizing user experiences and exploring new methods to continually enhance my skills.
+              As a passionate web developer, I thrive on solving technical challenges and creating efficient solutions. I focus on delivering seamless user experiences while constantly improving my skills and exploring new approaches.
             </p>
 
             <ScrollLayout>
