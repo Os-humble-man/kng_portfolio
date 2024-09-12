@@ -19,8 +19,7 @@ const technologies = [
     {
         name: "Frontend",
         items: [
-            { name: "React", logo: reactIcon },
-            { name: "Next", logo: nextjsIcon },
+            { name: "React/Next", logo: reactIcon },
             { name: "Tailwind CSS", logo: tailwindcssIcon },
             { name: "JavaScript", logo: javaScriptIcon },
             { name: "TypeScript", logo: typeScriptIcon },
