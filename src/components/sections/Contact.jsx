@@ -1,8 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import gmailLogo from "../../assets/gmail.png";
 import ScrollLayout from "../layout/ScrollLayout";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    service: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_fbhu0fm", // Remplacez par votre service ID
+        "template_bt34dhi", // Remplacez par votre template ID
+        e.target,
+        "X7hYKD1M5ym4UOA35" // Remplacez par votre user ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setStatus("Message sent successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            service: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          setStatus("Failed to send message. Please try again.");
+        }
+      );
+  };
+
   return (
     <div
       className="w-full bg-primary dark:bg-darkPrimary py-10 px-4 sm:px-8 md:px-12 lg:px-24"
@@ -23,7 +64,10 @@ export default function Contact() {
 
       <ScrollLayout>
         <div className="w-full flex justify-center text-textColor dark:text-darkText">
-          <form action="" className="w-full max-w-lg flex flex-col gap-4">
+          <form
+            onSubmit={handleSubmit}
+            className="w-full max-w-lg flex flex-col gap-4"
+          >
             <div className="space-y-2">
               <label htmlFor="name" className="block">
                 Name
@@ -31,6 +75,8 @@ export default function Contact() {
               <input
                 type="text"
                 name="name"
+                value={formData.name}
+                onChange={handleChange}
                 className="w-full p-3 rounded-md border border-gray-500 dark:border-gray-600 dark:bg-darkPrimary  bg-primary"
                 id="name"
               />
@@ -43,6 +89,8 @@ export default function Contact() {
               <input
                 type="email"
                 name="email"
+                value={formData.email}
+                onChange={handleChange}
                 className="w-full p-3 rounded-md border border-gray-500 dark:border-gray-600 dark:bg-darkPrimary bg-primary"
                 id="email"
               />
@@ -55,6 +103,8 @@ export default function Contact() {
               <select
                 name="service"
                 id="service"
+                value={formData.service}
+                onChange={handleChange}
                 className="w-full p-3 rounded-md border border-gray-500 dark:border-gray-600 dark:bg-darkPrimary bg-primary"
               >
                 <option value="">Please select a service</option>
@@ -69,6 +119,8 @@ export default function Contact() {
               <textarea
                 name="message"
                 id="message"
+                value={formData.message}
+                onChange={handleChange}
                 className="w-full p-3 rounded-md border border-gray-500 dark:border-gray-600 dark:bg-darkPrimary bg-primary"
                 rows={5}
               ></textarea>
@@ -77,6 +129,7 @@ export default function Contact() {
             <button className="w-full p-3 bg-gray-300 text-darkPrimary rounded-md font-semibold hover:bg-gray-400 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
               Get In Touch
             </button>
+            {status && <p>{status}</p>}
           </form>
         </div>
       </ScrollLayout>
