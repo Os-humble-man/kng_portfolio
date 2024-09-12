@@ -1,35 +1,47 @@
+import s1 from "../../assets/s1.png"
+import s2 from "../../assets/s2.png"
+import s3 from "../../assets/s3.png"
+import s4 from "../../assets/s4.png"
+import s5 from "../../assets/s5.png"
+
+
 
 
 const cardData = [
     {
-        title: "Data Analytics & Visualization",
+        title: "Responsive, high-performance website design",
         description:
-            "From data inception to actionable insights, I design compelling analytics and visualization solutions that illuminate trends, empower decision-making, and drive your business forward.",
-        icon: "Icon1", // Remplace par un composant d'icône ou un fichier d'image
+            "Design and development of websites that adapt perfectly to all types of screens (computers, tablets, smartphones), ensuring fluid navigation and optimised performance for fast loading times.",
+        icon: s1
     },
     {
-        title: "Predictive Analytics and Forecasting",
+        title: "Custom web application development",
         description:
-            "From data to foresight, I craft predictive analytics and forecasting solutions that steer your business with precision, empowering strategic decisions and ensuring future success.",
-        icon: "Icon2",
+            "We create web applications that are tailor-made to suit your business's needs. Our user-friendly interfaces and customised functionalities are designed to help you achieve your specific objectives.",
+        icon: s4
     },
     {
-        title: "Natural Language Processing",
+        title: "Development of APIs and back-end services",
         description:
-            "From text to insight, I craft Natural Language Processing solutions that decode language intricacies, revolutionizing data comprehension and empowering your business for success in the digital age.",
-        icon: "Icon3",
+            " Designing and implementing web services that allow different applications and systems to communicate securely and efficiently, facilitating data exchange between various systems.",
+        icon: s2
     },
     {
-        title: "AI Chatbots",
+        title: "Performance optimization and SEO",
         description:
-            "From design to deployment, I build AI Chatbots that enhance customer interactions, streamline processes, and elevate your brand's engagement, bringing innovative solutions to your audience's fingertips.",
-        icon: "Icon4",
+            "Enhancing website performance for a fast and seamless user experience, along with SEO optimizations to ensure better visibility on search engines, thereby increasing organic traffic.",
+        icon: s5
     },
     {
-        title: "Machine Learning",
+        title: "Integration of content management systems (CMS)",
         description:
-            "From concept to automation, I craft Machine Learning solutions that decode patterns and optimize performance, driving your business into the era of intelligent automation.",
-        icon: "Icon5",
+            "Implementing solutions that allow clients to easily manage their content without the need for advanced technical skills, while ensuring platform flexibility and scalability.",
+        icon: s3
     },
 ];
-export default cardData  
+
+
+
+
+
+export default cardData

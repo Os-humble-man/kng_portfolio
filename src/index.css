@@ -18,4 +18,5 @@
   * {
     font-style: normal;
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
   }

@@ -3,6 +3,7 @@ import profileImage from "../../assets/pic.jpeg";
 import Button from "../ui/Button";
 import ScrollLayout from "../layout/ScrollLayout";
 import { motion } from "framer-motion";
+import TechTabs from "../tabs/TechTabs";
 
 export default function About() {
   return (
@@ -23,14 +24,12 @@ export default function About() {
 
       <ScrollLayout>
         <div className="flex flex-col lg:flex-row lg:gap-8 lg:items-center">
-          {/* Photo de profil */}
-
           <div className="flex justify-center lg:justify-end lg:w-1/2 mt-8 lg:mt-0">
             <motion.div
               className="card"
-              whileHover={{ scale: 0.8, rotate: 3 }} // Augmente légèrement la taille et fait pivoter la carte
-              whileTap={{ scale: 0.9 }} // Réduit la taille lors du clic
-              transition={{ type: "spring", stiffness: 300, damping: 20 }} // Animation avec un ressort pour l'effet rebond
+              whileHover={{ scale: 0.8, rotate: 3 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               <img
                 src={profileImage}
@@ -40,23 +39,33 @@ export default function About() {
             </motion.div>
           </div>
 
-          {/* Texte */}
           <div className="flex flex-col items-center lg:items-start text-textColor dark:text-darkText font-monserrat lg:w-1/2">
             <p className="w-full text-center lg:text-left text-base md:text-lg py-3">
-             Hi there! I'm Oscar Kanangila, a web developer specializing in creating dynamic, user-friendly, and efficient web applications. With a passion for solving technical challenges and delivering seamless digital experiences, I'm dedicated to helping businesses grow and thrive in today's digital landscape.
-
+              Hi there! I'm Oscar Kanangila, a web developer specializing in
+              creating dynamic, user-friendly, and efficient web applications.
+              With a passion for solving technical challenges and delivering
+              seamless digital experiences, I'm dedicated to helping businesses
+              grow and thrive in today's digital landscape.
             </p>
             <p className="w-full text-center lg:text-left text-base md:text-lg py-3">
-              I bring a mix of technical expertise, hands-on experience, and a focus on clear communication to every project. Whether it's developing responsive websites, optimizing user interfaces, or streamlining backend processes, I'm here to help you unlock the full potential of your online presence.
+              I bring a mix of technical expertise, hands-on experience, and a
+              focus on clear communication to every project. Whether it's
+              developing responsive websites, optimizing user interfaces, or
+              streamlining backend processes, I'm here to help you unlock the
+              full potential of your online presence.
             </p>
             <p className="w-full text-center lg:text-left text-base md:text-lg py-3">
-              Let's work together to build powerful web solutions that drive real impact. Reach out, and let's start bringing your vision to life today!
+              Let's work together to build powerful web solutions that drive
+              real impact. Reach out, and let's start bringing your vision to
+              life today!
             </p>
+            <div className=" w-full">
+              <TechTabs />
+            </div>
           </div>
         </div>
       </ScrollLayout>
 
-      {/* Bouton de téléchargement du CV */}
       <div className="flex justify-center mt-8">
         <Button text={"Download Resume"} borderColor={"border-accent"} />
       </div>

@@ -10,24 +10,13 @@ import ScrollLayout from "../components/layout/ScrollLayout";
 export default function Home() {
   return (
     <div className=" dark:bg-darkPrimary bg-primary">
-      {/* <ScrollLayout> */}
       <Header />
-      {/* </ScrollLayout> */}
-
-      {/* <ScrollLayout> */}
       <About />
-      {/* </ScrollLayout> */}
 
-      {/* <ScrollLayout> */}
       <Services />
-      {/* </ScrollLayout> */}
 
-      {/* <ScrollLayout> */}
       <Projects />
-      {/* </ScrollLayout> */}
-      {/* <ScrollLayout> */}
       <Contact />
-      {/* </ScrollLayout> */}
 
       <Footer />
     </div>

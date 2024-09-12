@@ -35,13 +35,16 @@ export default function Header() {
             <h2 className="font-bold text-2xl md:text-3xl flex items-center">
               <span className="dark:text-white text-textColor ">&lt;/</span>
               <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">
-               The Mythe
+                The Mythe
               </span>
               <span className="dark:text-white text-textColor">&gt;</span>
             </h2>
 
             <p className="text-base md:text-lg lg:text-xl px-4 md:px-8 lg:px-16 py-3">
-              As a passionate web developer, I thrive on solving technical challenges and creating efficient solutions. I focus on delivering seamless user experiences while constantly improving my skills and exploring new approaches.
+              As a passionate web developer, I thrive on solving technical
+              challenges and creating efficient solutions. I focus on delivering
+              seamless user experiences while constantly improving my skills and
+              exploring new approaches.
             </p>
 
             <ScrollLayout>

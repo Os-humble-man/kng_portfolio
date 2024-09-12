@@ -3,12 +3,16 @@ import { FaBookOpenReader } from "react-icons/fa6";
 
 export default function ServiceCard({ title, description, icon }) {
   return (
-    <div className="p-4 border rounded-lg bg-gray-100 text-textColor  dark:bg-gray-800 dark:text-darkText flex flex-col items-start font-monserrat h-full w-full">
-      <div className="text-gray-800 mb-2 bg-blue-300 dark:bg-white rounded-md p-2 flex justify-center items-center">
-        <FaBookOpenReader size={30} />
+    <div className="p-4 border rounded-lg bg-gray-100 dark:bg-gray-800 text-textColor dark:text-darkText flex flex-col items-start font-monserrat h-full w-full transition-transform transform  shadow-lg hover:shadow-xl">
+      <div className="rounded-md p-2 flex justify-center items-center w-full mb-4">
+        <img src={icon} className="w-20 h-auto sm:w-24 lg:w-32" alt={icon} />
       </div>
-      <h3 className="font-semibold text-xl">{title}</h3>
-      <p className="mt-2 text-gray-400 p-2 flex-grow">{description}</p>
+      <h3 className="font-semibold text-lg sm:text-xl lg:text-2xl mb-2 text-center w-full ">
+        {title}
+      </h3>
+      <p className="text-gray-500 dark:text-gray-300 p-2 flex-grow text-sm sm:text-base lg:text-lg text-center">
+        {description}
+      </p>
     </div>
   );
 }

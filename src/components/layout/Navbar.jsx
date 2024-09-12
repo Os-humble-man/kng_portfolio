@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MdOutlineWbSunny, MdLanguage } from "react-icons/md";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { RiMenu3Line } from "react-icons/ri";
 import { FaRegMoon } from "react-icons/fa";
 import Button from "../ui/Button";
 
@@ -8,7 +9,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [isScrolled, setIsScrolled] = useState(false); // Nouveau état pour gérer le scroll
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -33,7 +34,6 @@ export default function Navbar() {
     }
   }, []);
 
-  // Fonction pour gérer le scroll et définir la section active
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "about", "projects", "services", "resume"];
@@ -50,7 +50,7 @@ export default function Navbar() {
       });
 
       setActiveSection(currentSection);
-      setIsScrolled(window.scrollY > 50); // Met à jour l'état de défilement à partir de la position de scroll
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -61,7 +61,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full py-6 z-40 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full py-2 md:py-3 z-40 transition-all duration-300 ${
         isScrolled ? "backdrop-blur-lg bg-white/30 shadow-md" : "bg-transparent"
       }`}
     >
@@ -110,32 +110,32 @@ export default function Navbar() {
                 activeSection === "resume" ? "text-accent" : ""
               }`}
             >
-              <a href="#resume">Resume</a>
+              <a href="#resume">Contact </a>
             </li>
           </ul>
         </div>
 
         {/* Buttons for desktop */}
         <div className="hidden md:flex items-center justify-between gap-4 md:gap-6 lg:gap-10">
-          <Button text={"Contact Me"} borderColor={"border-accent"} />
+          {/* <Button text={"Contact Me"} borderColor={"border-accent"} /> */}
           <div className="flex items-center gap-2">
             {darkMode ? (
               <MdOutlineWbSunny
-                size={24}
-                className="cursor-pointer hover:text-accent"
+                size={30}
+                className="cursor-pointer hover:bg-accent p-1 text-center rounded-full"
                 onClick={toggleTheme}
               />
             ) : (
               <FaRegMoon
-                size={24}
-                className="cursor-pointer hover:text-accent"
+                size={28}
+                className="cursor-pointer hover:bg-accent p-1 text-center rounded-full"
                 onClick={toggleTheme}
               />
             )}
 
             <MdLanguage
-              size={24}
-              className="cursor-pointer hover:text-accent"
+              size={30}
+              className="cursor-pointer hover:bg-accent p-1 text-center rounded-full"
             />
           </div>
         </div>
@@ -157,7 +157,7 @@ export default function Navbar() {
           )}
           <MdLanguage size={24} className="cursor-pointer hover:text-accent" />
           <button onClick={toggleMenu} className="text-2xl">
-            {isMenuOpen ? <FaTimes /> : <FaBars />}
+            {isMenuOpen ? <FaTimes /> : <RiMenu3Line />}
           </button>
         </div>
       </div>
