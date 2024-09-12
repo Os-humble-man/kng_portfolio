@@ -54,10 +54,8 @@ export default function About() {
               streamlining backend processes, I'm here to help you unlock the
               full potential of your online presence.
             </p>
-            <p className="w-full text-center lg:text-left text-base md:text-lg py-3">
-              Let's work together to build powerful web solutions that drive
-              real impact. Reach out, and let's start bringing your vision to
-              life today!
+            <p className="w-full text-center  py-3  font-bold text-2xl">
+              Tech Stack
             </p>
             <div className=" w-full">
               <TechTabs />
