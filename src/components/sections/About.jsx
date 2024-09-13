@@ -44,13 +44,13 @@ export default function About() {
           </div>
 
           <div className="flex flex-col items-center lg:items-start text-textColor dark:text-darkText font-monserrat lg:w-1/2">
-            <p className="w-full text-center lg:text-left text-base md:text-lg py-3">
+            <p className="w-full text-justify lg:text-left text-base md:text-lg py-3">
               {t('aboutMessage1')}
             </p>
-            <p className="w-full text-center lg:text-left text-base md:text-lg py-3">
+            <p className="w-full text-justify lg:text-left text-base md:text-lg py-3">
               {t('aboutMessage2')}
             </p>
-            <p className="w-full text-center  py-3  font-bold text-2xl">
+            <p className="w-full text-justify  py-3  font-bold text-2xl">
               Tech Stack
             </p>
             <div className=" w-full">

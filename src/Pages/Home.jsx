@@ -5,7 +5,6 @@ import Services from "../components/sections/Services";
 import Projects from "../components/sections/Projects";
 import Contact from "../components/sections/Contact";
 import Footer from "../components/layout/Footer";
-import ScrollLayout from "../components/layout/ScrollLayout";
 
 export default function Home() {
   return (
