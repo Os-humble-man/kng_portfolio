@@ -49,7 +49,10 @@ export default function Header() {
             </p>
 
             <ScrollLayout>
-              <Button text={t("button.download")} borderColor={"border-accent"} />
+              <a href="#resume">
+              <Button text={t("button.contact")} borderColor={"border-accent"} />
+
+              </a>
             </ScrollLayout>
 
             <FaAnglesDown

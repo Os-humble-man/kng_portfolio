@@ -51,10 +51,10 @@ export default function Contact() {
     if (validate()) {
       emailjs
         .sendForm(
-          "service_fbhu0fm",
-          "template_bt34dhi", 
+          process.env.REACT_APP_EMAIL_JS_SERVICE_KEY,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_KEY,
           e.target,
-          "X7hYKD1M5ym4UOA35" 
+          process.env.REACT_APP_EMAILJS_KEY
         )
         .then(
           (result) => {
@@ -77,6 +77,7 @@ export default function Contact() {
       setStatus(t('formErrorMessage.general'));
     }
   };
+
 
   return (
     <div
@@ -150,7 +151,7 @@ export default function Contact() {
                 </option>
                 <option value="SEO Optimization">{t('formLabel.formOption.service3')}</option>
                 <option value="UI/UX Design">{t('formLabel.formOption.service4')}</option>
-                <option value="Mentoring and coaching">{t('formLabel.formOption.service6')}</option>
+                <option value="Mentoring and coaching">{t('formLabel.formOption.service5')}</option>
 
               </select>
               {errors.service && <p className="text-red-500">{errors.service}</p>}
