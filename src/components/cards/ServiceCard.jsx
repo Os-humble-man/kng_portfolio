@@ -10,7 +10,7 @@ export default function ServiceCard({ title, description, icon }) {
       <h3 className="font-semibold text-lg sm:text-xl lg:text-2xl mb-2 text-center w-full ">
         {title}
       </h3>
-      <p className="text-gray-500 dark:text-gray-300 p-2 flex-grow text-sm sm:text-base lg:text-lg text-justify">
+      <p className="text-gray-500 dark:text-gray-300 p-2 flex-grow text-sm sm:text-base lg:text-lg text-left">
         {description}
       </p>
     </div>
