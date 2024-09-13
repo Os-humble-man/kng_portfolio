@@ -1,0 +1,63 @@
+{
+  "menu":{
+    "home":"Home",
+    "about":"About",
+    "service":"Services",
+    "project":"Projects",
+    "contact":"Contact"
+  },
+  "button":{
+    "contact":"Contact Me",
+    "download": "Download Resume",
+    "touch" : "Get In Touch"
+  },
+  "sectionTitle":{
+    "about" : "About Me",
+    "aboutSubtitle":"Get to know me",
+    "service":"Services",
+    "serviceSubtitle":"What I do",
+    "project":"Projects",
+    "projectSubtitle":"Some of my Work",
+    "contactSubtitle" :"Let's work together"
+  },
+  "serviceCard":{
+    "card1Title":"Responsive, high-performance website design",
+    "card1Text":"Design and development of websites that adapt perfectly to all types of screens (computers, tablets, smartphones), ensuring fluid navigation and optimised performance for fast loading times.",
+    "card2Title": "Custom web application development ",
+    "card2Text" : "We create web applications that are tailor-made to suit your business's needs. Our user-friendly interfaces and customised functionalities are designed to help you achieve your specific objectives.",
+    "card3Title" : "Development of APIs and back-end services",
+    "card3Text": "Designing and implementing web services that allow different applications and systems to communicate securely and efficiently, facilitating data exchange between various systems.",
+    "card4Title": "Performance optimization and SEO",
+    "card4Text" : "Enhancing website performance for a fast and seamless user experience, along with SEO optimizations to ensure better visibility on search engines, thereby increasing organic traffic.",
+    "card5Title" : "Integration of content management systems (CMS)",
+    "card5Text" : "Implementing solutions that allow clients to easily manage their content without the need for advanced technical skills, while ensuring platform flexibility and scalability."
+  },
+  "formLabel":{
+    "name":"Name",
+    "email":"Email Address",
+    "service" : "Service",
+    "selectMessage" : "Please select a service",
+    "formOption":{
+        "service1" : "Web Development",
+        "service2" : "Mobile App Development",
+        "service3" : "SEO Optimization",
+        "service4" : "Quotations and advice",
+        "service5" : "Mentoring and coaching"
+    }
+  },
+  "formErrorMessage":{
+    "name": "Name is required ",
+    "email": "Email is required",
+    "service" : "Service is required",
+    "message" : "Message is required",
+    "general" : "Please correct the errors in the form.",
+    "failedSend":"Failed to send message. Please try again.",
+    "successSend":"Message sent successfully!"
+  },
+  "copyright":"All rights reserved to Oscar Kanangila",
+  "workTogether":"Let’s Work Together -  ",
+  "welcomMessage": "As a passionate web developer, I thrive on solving technical challenges and creating efficient solutions. I focus on delivering seamless user experiences while constantly improving my skills and exploring new approaches.",
+  "aboutMessage1" : "Hi there! I'm Oscar Kanangila, a web developer specializing in creating dynamic, user-friendly, and efficient web applications. With a passion for solving technical challenges and delivering seamless digital experiences, I'm dedicated to helping businesses grow and thrive in today's digital landscape.",
+  "aboutMessage2" : "I bring a mix of technical expertise, hands-on experience, and a focus on clear communication to every project. Whether it's developing responsive websites, optimizing user interfaces, or streamlining backend processes, I'm here to help you unlock the full potential of your online presence."
+
+}

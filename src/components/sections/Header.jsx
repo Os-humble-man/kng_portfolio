@@ -5,9 +5,13 @@ import Button from "../ui/Button";
 import { FaAnglesDown } from "react-icons/fa6";
 import { motion, useScroll, useSpring } from "framer-motion";
 import ScrollLayout from "../layout/ScrollLayout";
+import { useTranslation } from "react-i18next";
+
 
 export default function Header() {
   const { scrollYProgress } = useScroll();
+  const { i18n, t } = useTranslation();
+
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
@@ -41,14 +45,11 @@ export default function Header() {
             </h2>
 
             <p className="text-base md:text-lg lg:text-xl px-4 md:px-8 lg:px-16 py-3">
-              As a passionate web developer, I thrive on solving technical
-              challenges and creating efficient solutions. I focus on delivering
-              seamless user experiences while constantly improving my skills and
-              exploring new approaches.
+              {t('welcomMessage')}
             </p>
 
             <ScrollLayout>
-              <Button text={"Contact Me"} borderColor={"border-accent"} />
+              <Button text={t("button.download")} borderColor={"border-accent"} />
             </ScrollLayout>
 
             <FaAnglesDown

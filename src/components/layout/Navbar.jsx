@@ -3,6 +3,7 @@ import { MdOutlineWbSunny, MdLanguage } from "react-icons/md";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { RiMenu3Line } from "react-icons/ri";
 import { FaRegMoon } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import Button from "../ui/Button";
 
 export default function Navbar() {
@@ -10,6 +11,9 @@ export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showLanguageMenu, setShowLanguageMenu] = useState(false);
+
+  const { i18n, t } = useTranslation(); // Import the i18n and translation hook
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -24,6 +28,15 @@ export default function Navbar() {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
     }
+  };
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng); // Change the language with i18next
+    setShowLanguageMenu(false); // Close the language menu
+  };
+
+  const toggleLanguageMenu = () => {
+    setShowLanguageMenu(!showLanguageMenu);
   };
 
   useEffect(() => {
@@ -81,43 +94,42 @@ export default function Navbar() {
                 activeSection === "home" ? "text-accent" : ""
               }`}
             >
-              <a href="#home">Home</a>
+              <a href="#home">{t('menu.home')}</a>
             </li>
             <li
               className={`cursor-pointer hover:text-accent ${
                 activeSection === "about" ? "text-accent" : ""
               }`}
             >
-              <a href="#about">About</a>
+              <a href="#about">{t('menu.about')}</a>
             </li>
             <li
               className={`cursor-pointer hover:text-accent ${
                 activeSection === "services" ? "text-accent" : ""
               }`}
             >
-              <a href="#services">Services</a>
+              <a href="#services">{t('menu.service')}</a>
             </li>
             <li
               className={`cursor-pointer hover:text-accent ${
                 activeSection === "projects" ? "text-accent" : ""
               }`}
             >
-              <a href="#projects">Projects</a>
+              <a href="#projects">{t('menu.project')}</a>
             </li>
-
             <li
               className={`cursor-pointer hover:text-accent ${
                 activeSection === "resume" ? "text-accent" : ""
               }`}
             >
-              <a href="#resume">Contact </a>
+              <a href="#resume">{t('menu.contact')}</a>
             </li>
           </ul>
         </div>
 
         {/* Buttons for desktop */}
         <div className="hidden md:flex items-center justify-between gap-4 md:gap-6 lg:gap-10">
-          {/* <Button text={"Contact Me"} borderColor={"border-accent"} /> */}
+          {/* Theme Toggle */}
           <div className="flex items-center gap-2">
             {darkMode ? (
               <MdOutlineWbSunny
@@ -133,14 +145,34 @@ export default function Navbar() {
               />
             )}
 
-            <MdLanguage
-              size={30}
-              className="cursor-pointer hover:bg-accent p-1 text-center rounded-full"
-            />
+            {/* Language Toggle */}
+            <div className="relative">
+              <MdLanguage
+                size={30}
+                className="cursor-pointer hover:bg-accent p-1 text-center rounded-full"
+                onClick={toggleLanguageMenu}
+              />
+              {showLanguageMenu && (
+                <ul className="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden z-50">
+                  <li
+                    className="cursor-pointer px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    onClick={() => changeLanguage("en")}
+                  >
+                    English
+                  </li>
+                  <li
+                    className="cursor-pointer px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    onClick={() => changeLanguage("fr")}
+                  >
+                    Français
+                  </li>
+                </ul>
+              )}
+            </div>
           </div>
         </div>
 
-        {/* Mobile Hamburger Menu Icon with Language and Theme Icons */}
+        {/* Mobile Hamburger Menu Icon */}
         <div className="md:hidden flex items-center gap-4">
           {darkMode ? (
             <MdOutlineWbSunny
@@ -155,7 +187,29 @@ export default function Navbar() {
               onClick={toggleTheme}
             />
           )}
-          <MdLanguage size={24} className="cursor-pointer hover:text-accent" />
+          <div className="relative">
+            <MdLanguage
+              size={24}
+              className="cursor-pointer hover:text-accent"
+              onClick={toggleLanguageMenu}
+            />
+            {showLanguageMenu && (
+              <ul className="absolute right-0 mt-2 w-32 bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden z-50">
+                <li
+                  className="cursor-pointer px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  onClick={() => changeLanguage("en")}
+                >
+                  English
+                </li>
+                <li
+                  className="cursor-pointer px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                  onClick={() => changeLanguage("fr")}
+                >
+                  Français
+                </li>
+              </ul>
+            )}
+          </div>
           <button onClick={toggleMenu} className="text-2xl">
             {isMenuOpen ? <FaTimes /> : <RiMenu3Line />}
           </button>
@@ -184,7 +238,7 @@ export default function Navbar() {
               }`}
               onClick={toggleMenu}
             >
-              <a href="#home">Home</a>
+              <a href="#home">{t('home')}</a>
             </li>
             <li
               className={`cursor-pointer hover:text-accent ${
@@ -192,15 +246,7 @@ export default function Navbar() {
               }`}
               onClick={toggleMenu}
             >
-              <a href="#about">About</a>
-            </li>
-            <li
-              className={`cursor-pointer hover:text-accent ${
-                activeSection === "projects" ? "text-accent" : ""
-              }`}
-              onClick={toggleMenu}
-            >
-              <a href="#projects">Projects</a>
+              <a href="#about">{t('about')}</a>
             </li>
             <li
               className={`cursor-pointer hover:text-accent ${
@@ -208,7 +254,15 @@ export default function Navbar() {
               }`}
               onClick={toggleMenu}
             >
-              <a href="#services">Services</a>
+              <a href="#services">{t('services')}</a>
+            </li>
+            <li
+              className={`cursor-pointer hover:text-accent ${
+                activeSection === "projects" ? "text-accent" : ""
+              }`}
+              onClick={toggleMenu}
+            >
+              <a href="#projects">{t('projects')}</a>
             </li>
             <li
               className={`cursor-pointer hover:text-accent ${
@@ -216,7 +270,7 @@ export default function Navbar() {
               }`}
               onClick={toggleMenu}
             >
-              <a href="#resume">Resume</a>
+              <a href="#resume">{t('contact')}</a>
             </li>
           </ul>
         </div>

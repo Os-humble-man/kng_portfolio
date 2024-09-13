@@ -4,8 +4,12 @@ import Button from "../ui/Button";
 import ScrollLayout from "../layout/ScrollLayout";
 import { motion } from "framer-motion";
 import TechTabs from "../tabs/TechTabs";
+import { useTranslation } from "react-i18next";
+
 
 export default function About() {
+  const { i18n, t } = useTranslation();
+
   return (
     <div
       className="min-w-full bg-primary dark:bg-darkPrimary py-10 mx-auto px-8 md:px-12 lg:px-24"
@@ -13,10 +17,10 @@ export default function About() {
     >
       <ScrollLayout>
         <div className="flex flex-col items-center text-textColor dark:text-darkText mb-8">
-          <h1 className="font-bold text-4xl md:text-5xl">About Me</h1>
+          <h1 className="font-bold text-4xl md:text-5xl">{t('sectionTitle.about')}</h1>
           <h2 className="font-bold text-2xl md:text-3xl mt-4">
             <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">
-              Get to know me
+            {t('sectionTitle.aboutSubtitle')}
             </span>
           </h2>
         </div>
@@ -41,18 +45,10 @@ export default function About() {
 
           <div className="flex flex-col items-center lg:items-start text-textColor dark:text-darkText font-monserrat lg:w-1/2">
             <p className="w-full text-center lg:text-left text-base md:text-lg py-3">
-              Hi there! I'm Oscar Kanangila, a web developer specializing in
-              creating dynamic, user-friendly, and efficient web applications.
-              With a passion for solving technical challenges and delivering
-              seamless digital experiences, I'm dedicated to helping businesses
-              grow and thrive in today's digital landscape.
+              {t('aboutMessage1')}
             </p>
             <p className="w-full text-center lg:text-left text-base md:text-lg py-3">
-              I bring a mix of technical expertise, hands-on experience, and a
-              focus on clear communication to every project. Whether it's
-              developing responsive websites, optimizing user interfaces, or
-              streamlining backend processes, I'm here to help you unlock the
-              full potential of your online presence.
+              {t('aboutMessage2')}
             </p>
             <p className="w-full text-center  py-3  font-bold text-2xl">
               Tech Stack

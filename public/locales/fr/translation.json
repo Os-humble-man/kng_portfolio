@@ -1,0 +1,63 @@
+{
+    "menu": {
+      "home": "Accueil",
+      "about": "À propos",
+      "service": "Services",
+      "project": "Projets",
+      "contact": "Contact"
+    },
+    "button": {
+      "contact": "Me Contacter",
+      "download": "Télécharger le CV",
+      "touch": "Entrer en Contact"
+    },
+    "sectionTitle": {
+      "about": "À propos de moi",
+      "aboutSubtitle": "Faites connaissance avec moi",
+      "service": "Services",
+      "serviceSubtitle": "Ce que je fais",
+      "project": "Projets",
+      "projectSubtitle": "Quelques-uns de mes travaux",
+      "contactSubtitle": "Travaillons ensemble"
+    },
+    "serviceCard": {
+      "card1Title": "Conception de sites web réactifs et performants",
+      "card1Text": "Conception et développement de sites web qui s'adaptent parfaitement à tous types d'écrans (ordinateurs, tablettes, smartphones), assurant une navigation fluide et des performances optimisées pour des temps de chargement rapides.",
+      "card2Title": "Développement d'applications web sur mesure",
+      "card2Text": "Nous créons des applications web adaptées aux besoins spécifiques de votre entreprise. Nos interfaces conviviales et nos fonctionnalités personnalisées sont conçues pour vous aider à atteindre vos objectifs.",
+      "card3Title": "Développement d'API et de services back-end",
+      "card3Text": "Conception et mise en œuvre de services web permettant à différentes applications et systèmes de communiquer de manière sécurisée et efficace, facilitant ainsi l'échange de données entre divers systèmes.",
+      "card4Title": "Optimisation des performances et SEO",
+      "card4Text": "Amélioration des performances des sites web pour une expérience utilisateur rapide et fluide, avec des optimisations SEO garantissant une meilleure visibilité sur les moteurs de recherche, augmentant ainsi le trafic organique.",
+      "card5Title": "Intégration de systèmes de gestion de contenu (CMS)",
+      "card5Text": "Mise en place de solutions permettant aux clients de gérer facilement leur contenu sans compétences techniques avancées, tout en assurant flexibilité et évolutivité de la plateforme."
+    },
+    "formLabel": {
+      "name": "Nom",
+      "email": "Adresse Email",
+      "service": "Service",
+      "selectMessage": "Veuillez sélectionner un service",
+      "formOption": {
+        "service1": "Développement Web",
+        "service2": "Développement d'Applications Mobiles",
+        "service3": "Optimisation SEO",
+        "service4": "Devis et conseils",
+        "service6": "Mentorat et coaching"
+      }
+    },
+    "formErrorMessage": {
+      "name": "Le nom est requis",
+      "email": "L'email est requis",
+      "service": "Le service est requis",
+      "message": "Le message est requis",
+      "general": "Veuillez corriger les erreurs dans le formulaire.",
+      "failedSend": "Échec de l'envoi du message. Veuillez réessayer.",
+      "successSend": "Message envoyé avec succès !"
+    },
+    "copyright": "Tous droits réservés à Oscar Kanangila",
+    "workTogether": "Travaillons Ensemble -",
+    "welcomMessage": "En tant que développeur web passionné, je me passionne pour la résolution de défis techniques et la création de solutions efficaces. Je me concentre sur la fourniture d'expériences utilisateur fluides tout en améliorant constamment mes compétences et en explorant de nouvelles approches.",
+    "aboutMessage1": "Bonjour ! Je suis Oscar Kanangila, un développeur web spécialisé dans la création d'applications web dynamiques, conviviales et efficaces. Avec une passion pour la résolution de défis techniques et la création d'expériences numériques fluides, je suis dédié à aider les entreprises à se développer et à prospérer dans le paysage numérique actuel.",
+    "aboutMessage2": "J'apporte un mélange d'expertise technique, d'expérience pratique et d'accent sur une communication claire à chaque projet. Que ce soit pour développer des sites web réactifs, optimiser des interfaces utilisateur ou simplifier les processus back-end, je suis là pour vous aider à libérer tout le potentiel de votre présence en ligne."
+  }
+  
