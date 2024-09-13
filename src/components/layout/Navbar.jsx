@@ -13,7 +13,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
 
-  const { i18n, t } = useTranslation(); // Import the i18n and translation hook
+  const { i18n, t } = useTranslation(); 
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -31,8 +31,8 @@ export default function Navbar() {
   };
 
   const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng); // Change the language with i18next
-    setShowLanguageMenu(false); // Close the language menu
+    i18n.changeLanguage(lng); 
+    setShowLanguageMenu(false); 
   };
 
   const toggleLanguageMenu = () => {
@@ -79,14 +79,12 @@ export default function Navbar() {
       }`}
     >
       <div className="flex items-center justify-between mx-auto px-6 md:px-12 lg:px-32 w-full text-textColor dark:text-darkText">
-        {/* Logo */}
         <div className="w-auto">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold font-logofont">
             Oscar K.
           </h1>
         </div>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex w-auto">
           <ul className="flex items-center gap-x-4 md:gap-x-6 lg:gap-x-10 font-monserrat">
             <li
@@ -127,9 +125,7 @@ export default function Navbar() {
           </ul>
         </div>
 
-        {/* Buttons for desktop */}
         <div className="hidden md:flex items-center justify-between gap-4 md:gap-6 lg:gap-10">
-          {/* Theme Toggle */}
           <div className="flex items-center gap-2">
             {darkMode ? (
               <MdOutlineWbSunny
@@ -145,7 +141,6 @@ export default function Navbar() {
               />
             )}
 
-            {/* Language Toggle */}
             <div className="relative">
               <MdLanguage
                 size={30}
@@ -172,7 +167,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Hamburger Menu Icon */}
         <div className="md:hidden flex items-center gap-4">
           {darkMode ? (
             <MdOutlineWbSunny
@@ -216,7 +210,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Overlay */}
       {isMenuOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
@@ -224,7 +217,6 @@ export default function Navbar() {
         ></div>
       )}
 
-      {/* Mobile Menu */}
       <div
         className={`fixed top-0 left-0 h-full w-3/4 max-w-xs bg-gradient-light dark:bg-dark-image z-50 transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"

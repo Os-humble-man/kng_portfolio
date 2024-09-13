@@ -35,7 +35,7 @@ export default function Services() {
                   <motion.div
                     className="card"
                     whileHover={{ scale: [null, 0.99, 0.99] }}
-                    transition={{ duration: 0.3 }} // Durée de la transition
+                    transition={{ duration: 0.3 }} 
                   >
                     <ServiceCard
                       title={t(`serviceCard.card${index + 1}Title`)}
