@@ -61,7 +61,7 @@ export default function About() {
       </ScrollLayout>
 
       <div className="flex justify-center mt-8">
-        <a href="https://drive.google.com/file/d/1gz1yQf64ZjszE61Jd9MQgxeOjZHTuPbR/view" download={"oscarkngCv"} target="_blank" rel="noopener noreferrer">
+        <a href="https://drive.google.com/file/d/1gz1yQf64ZjszE61Jd9MQgxeOjZHTuPbR/view" target="_blank" rel="noopener noreferrer">
           <Button text={"Download Resume"} borderColor={"border-accent"} />
         </a>
       </div>
