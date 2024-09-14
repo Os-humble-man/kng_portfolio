@@ -25,7 +25,7 @@ export default {
       },
       backgroundImage: {
         'gradient-light': 'linear-gradient(to right, #00f, #0ff)',
-        'dark-image': "url('./dark_background.jpg')",
+        'dark-image': "url('https://img.freepik.com/free-vector/grey-hexagons-black-background_78370-2098.jpg?t=st=1726293714~exp=1726297314~hmac=1870f339fb1781bc4635ddfe4c73ce8ce7cd5f45cba460a86e3356e4e95e38dc&w=1380')",
       },
     },
   },
