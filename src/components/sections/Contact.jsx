@@ -4,6 +4,11 @@ import gmailLogo from "../../assets/gmail.png";
 import ScrollLayout from "../layout/ScrollLayout";
 import { useTranslation } from "react-i18next";
 
+// EmailJS keys
+const SERVICE_KEY = import.meta.env.VITE_SERVICE_KEY;
+const TEMPLATE_KEY = import.meta.env.VITE_EMAILJS_TEMPLATE_KEY;
+const USER_KEY = import.meta.env.VITE_EMAILJS_KEY;
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -13,10 +18,7 @@ export default function Contact() {
   });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("");
-  const { i18n, t } = useTranslation();
-  const SERVICE_KEY = import.meta.env.VITE_SERVICE_KEY;
-  const TEMPLATE_KEY = import.meta.env.VITE_EMAILJS_TEMPLATE_KEY;
-  const USER_KEY = import.meta.env.VITE_EMAILJS_KEY;
+  const { t } = useTranslation();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
