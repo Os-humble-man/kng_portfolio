@@ -4,7 +4,6 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { RiMenu3Line } from "react-icons/ri";
 import { FaRegMoon } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import Button from "../ui/Button";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +12,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
 
-  const { i18n, t } = useTranslation(); 
+  const { i18n, t } = useTranslation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -31,8 +30,8 @@ export default function Navbar() {
   };
 
   const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng); 
-    setShowLanguageMenu(false); 
+    i18n.changeLanguage(lng);
+    setShowLanguageMenu(false);
   };
 
   const toggleLanguageMenu = () => {
@@ -49,7 +48,14 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "projects", "services", "resume"];
+      const sections = [
+        "home",
+        "about",
+        "projects",
+        "services",
+        "resume",
+        "blog",
+      ];
       let currentSection = "home";
 
       sections.forEach((section) => {
@@ -92,35 +98,44 @@ export default function Navbar() {
                 activeSection === "home" ? "text-accent" : ""
               }`}
             >
-              <a href="#home">{t('menu.home')}</a>
+              <a href="#home">{t("menu.home")}</a>
             </li>
             <li
               className={`cursor-pointer hover:text-accent ${
                 activeSection === "about" ? "text-accent" : ""
               }`}
             >
-              <a href="#about">{t('menu.about')}</a>
+              <a href="#about">{t("menu.about")}</a>
             </li>
             <li
               className={`cursor-pointer hover:text-accent ${
                 activeSection === "services" ? "text-accent" : ""
               }`}
             >
-              <a href="#services">{t('menu.service')}</a>
+              <a href="#services">{t("menu.service")}</a>
             </li>
             <li
               className={`cursor-pointer hover:text-accent ${
                 activeSection === "projects" ? "text-accent" : ""
               }`}
             >
-              <a href="#projects">{t('menu.project')}</a>
+              <a href="#projects">{t("menu.project")}</a>
             </li>
+
             <li
               className={`cursor-pointer hover:text-accent ${
                 activeSection === "resume" ? "text-accent" : ""
               }`}
             >
-              <a href="#resume">{t('menu.contact')}</a>
+              <a href="#blog">Blog</a>
+            </li>
+
+            <li
+              className={`cursor-pointer hover:text-accent ${
+                activeSection === "resume" ? "text-accent" : ""
+              }`}
+            >
+              <a href="#resume">{t("menu.contact")}</a>
             </li>
           </ul>
         </div>
@@ -230,7 +245,7 @@ export default function Navbar() {
               }`}
               onClick={toggleMenu}
             >
-              <a href="#home">{t('home')}</a>
+              <a href="#home">{t("home")}</a>
             </li>
             <li
               className={`cursor-pointer hover:text-accent ${
@@ -238,7 +253,7 @@ export default function Navbar() {
               }`}
               onClick={toggleMenu}
             >
-              <a href="#about">{t('about')}</a>
+              <a href="#about">{t("about")}</a>
             </li>
             <li
               className={`cursor-pointer hover:text-accent ${
@@ -246,7 +261,7 @@ export default function Navbar() {
               }`}
               onClick={toggleMenu}
             >
-              <a href="#services">{t('services')}</a>
+              <a href="#services">{t("services")}</a>
             </li>
             <li
               className={`cursor-pointer hover:text-accent ${
@@ -254,7 +269,7 @@ export default function Navbar() {
               }`}
               onClick={toggleMenu}
             >
-              <a href="#projects">{t('projects')}</a>
+              <a href="#projects">{t("projects")}</a>
             </li>
             <li
               className={`cursor-pointer hover:text-accent ${
@@ -262,7 +277,7 @@ export default function Navbar() {
               }`}
               onClick={toggleMenu}
             >
-              <a href="#resume">{t('contact')}</a>
+              <a href="#resume">{t("contact")}</a>
             </li>
           </ul>
         </div>
