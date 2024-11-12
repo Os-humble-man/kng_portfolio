@@ -7,18 +7,13 @@ import Button from "../ui/Button";
 export default function Projects() {
   const { i18n, t } = useTranslation();
   const [showAll, setShowAll] = useState(false);
-
-  // Exemple de liste de projets
   const projects = Array.from({ length: 6 }, (_, index) => ({
     id: index,
     title: `Project ${index + 1}`,
-    image: "", // ajoutez les images correspondantes ici
+    image: "",
   }));
 
-  // Divisez la liste des projets en groupes de base et supplémentaires
   const visibleProjects = showAll ? projects : projects.slice(0, 3);
-
-  // Fonction pour alterner l'état d'affichage
   const toggleShowAll = () => setShowAll(!showAll);
 
   return (

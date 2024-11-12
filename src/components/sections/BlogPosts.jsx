@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import BlogCard from "./BlogPosts";
 import ScrollLayout from "../layout/ScrollLayout";
 import Button from "../ui/Button";
+import axios from "axios";
 
 const DEV_TO_KEY = import.meta.env.DEV_TO_KEY;
 
@@ -39,7 +40,6 @@ export default function BlogPosts() {
           </h2>
         </div>
 
-        {/* Conteneur des cartes avec une grille responsive */}
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {articles.map((article) => (
             <BlogCard
@@ -52,7 +52,6 @@ export default function BlogPosts() {
           ))}
         </div>
 
-        {/* Bouton View All Projects */}
         <div className="flex justify-center mt-8">
           <Button
           // onClick={toggleShowAll}
@@ -63,18 +62,4 @@ export default function BlogPosts() {
       </ScrollLayout>
     </div>
   );
-}
-
-{
-  /* <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-        {articles.map((article) => (
-          <BlogCard
-            key={article.id}
-            title={article.title}
-            description={article.description}
-            coverImage={article.cover_image}
-            url={article.url}
-          />
-        ))}
-      </div> */
 }
