@@ -10,12 +10,7 @@ export default function BlogPosts() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch("https://dev.to/api/articles/me", {
-      headers: {
-        "api-key": DEV_TO_KEY,
-      },
-    })
-      .then((response) => console.log(response))
+    fetch("https://dev.to/api/articles?username=oshumbleman")
       .then((response) => response.json())
       .then((data) => {
         setArticles(data);
