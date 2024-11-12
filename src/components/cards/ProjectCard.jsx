@@ -4,7 +4,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 export default function ProjectCard({ title, image }) {
   return (
-    <div className="p-4 text-white flex flex-col items-start font-monserrat max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
+    <div className="p-4 text-white flex flex-col items-start font-monserrat max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto cursor-pointer">
       <img src={img} className="w-full h-auto rounded-lg" alt="project" />
       <h3 className="font-semibold text-lg md:text-xl lg:text-2xl py-4">
         {"Une superbe carte"}

@@ -5,6 +5,7 @@ import Services from "../components/sections/Services";
 import Projects from "../components/sections/Projects";
 import Contact from "../components/sections/Contact";
 import Footer from "../components/layout/Footer";
+import BlogPosts from "../components/sections/BlogPosts";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Services />
 
       <Projects />
+      <BlogPosts />
       <Contact />
 
       <Footer />
