@@ -35,7 +35,7 @@ export default function BlogPosts() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {articles.map((article) => (
             <BlogCard
               key={article.id}
@@ -49,11 +49,11 @@ export default function BlogPosts() {
 
         <div className="flex justify-center mt-8">
           <Button
-          // onClick={toggleShowAll}
-          // text={`${showAll ? t("Réduire") : t("Voir tous les projets")}`}
-          // borderColor={"border-accent"}
+          onClick={toggleShowAll}
+          text={`${showAll ? t("Réduire") : t("Voir tous les projets")}`}
+          borderColor={"border-accent"}
           ></Button>
-        </div>
+        </div> */}
       </ScrollLayout>
     </div>
   );
