@@ -3,6 +3,7 @@ import ScrollLayout from "../layout/ScrollLayout";
 import { useTranslation } from "react-i18next";
 import ProjectCard from "../cards/ProjectCard";
 import Button from "../ui/Button";
+import projectInfo from "../utils/ProjectInfo";
 
 export default function Projects() {
   const { i18n, t } = useTranslation();
@@ -33,11 +34,12 @@ export default function Projects() {
 
         {/* Conteneur des cartes avec une grille responsive */}
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-          {visibleProjects.map((project) => (
+          {projectInfo.map((project) => (
             <ProjectCard
               key={project.id}
               title={project.title}
-              image={project.image}
+              description={project.description}
+              image={project.cover}
             />
           ))}
         </div>
