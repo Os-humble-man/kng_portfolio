@@ -233,7 +233,7 @@ export default function Navbar() {
       )}
 
       <div
-        className={`fixed top-0 left-0 h-full w-3/4 max-w-xs bg-gradient-light dark:bg-dark-image z-50 transform ${
+        className={`fixed top-0 left-0 h-full w-3/4 max-w-xs bg-primary dark:bg-dark-image z-50 transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
