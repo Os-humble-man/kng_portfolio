@@ -53,7 +53,7 @@ export default function Navbar() {
         "about",
         "projects",
         "services",
-        "resume",
+        "contact",
         "blog",
       ];
       let currentSection = "home";
@@ -124,7 +124,7 @@ export default function Navbar() {
 
             <li
               className={`cursor-pointer hover:text-accent ${
-                activeSection === "resume" ? "text-accent" : ""
+                activeSection === "blog" ? "text-accent" : ""
               }`}
             >
               <a href="#blog">Blog</a>
@@ -132,10 +132,10 @@ export default function Navbar() {
 
             <li
               className={`cursor-pointer hover:text-accent ${
-                activeSection === "resume" ? "text-accent" : ""
+                activeSection === "contact" ? "text-accent" : ""
               }`}
             >
-              <a href="#resume">{t("menu.contact")}</a>
+              <a href="#contact">{t("menu.contact")}</a>
             </li>
           </ul>
         </div>

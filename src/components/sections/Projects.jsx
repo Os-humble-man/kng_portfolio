@@ -8,13 +8,8 @@ import projectInfo from "../utils/ProjectInfo";
 export default function Projects() {
   const { i18n, t } = useTranslation();
   const [showAll, setShowAll] = useState(false);
-  const projects = Array.from({ length: 6 }, (_, index) => ({
-    id: index,
-    title: `Project ${index + 1}`,
-    image: "",
-  }));
 
-  const visibleProjects = showAll ? projects : projects.slice(0, 3);
+  const visibleProjects = showAll ? projectInfo : projectInfo.slice(0, 3);
   const toggleShowAll = () => setShowAll(!showAll);
 
   return (
@@ -32,19 +27,18 @@ export default function Projects() {
           </h2>
         </div>
 
-        {/* Conteneur des cartes avec une grille responsive */}
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-          {projectInfo.map((project) => (
+          {visibleProjects.map((project) => (
             <ProjectCard
               key={project.id}
               title={project.title}
               description={project.description}
+              url={project.url}
               image={project.cover}
             />
           ))}
         </div>
 
-        {/* Bouton View All Projects */}
         <div className="flex justify-center mt-8">
           <Button
             onClick={toggleShowAll}

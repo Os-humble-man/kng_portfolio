@@ -7,7 +7,6 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import ScrollLayout from "../layout/ScrollLayout";
 import { useTranslation } from "react-i18next";
 
-
 export default function Header() {
   const { scrollYProgress } = useScroll();
   const { i18n, t } = useTranslation();
@@ -45,13 +44,15 @@ export default function Header() {
             </h2>
 
             <p className="text-base md:text-lg lg:text-xl px-4 md:px-8 lg:px-16 py-3">
-              {t('welcomMessage')}
+              {t("welcomMessage")}
             </p>
 
             <ScrollLayout>
-              <a href="#resume">
-              <Button text={t("button.contact")} borderColor={"border-accent"} />
-
+              <a href="#contact">
+                <Button
+                  text={t("button.contact")}
+                  borderColor={"border-accent"}
+                />
               </a>
             </ScrollLayout>
 

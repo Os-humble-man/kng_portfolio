@@ -41,14 +41,14 @@ export default function BlogPosts() {
   return (
     <div
       className="w-full bg-primary py-10 mx-auto px-8 md:px-12 lg:px-24 dark:bg-darkPrimary"
-      id="projects"
+      id="blog"
     >
       {/* <ScrollLayout> */}
       <div className="flex justify-center flex-col items-center gap-4 text-textColor dark:text-darkText font-monserrat">
         <h1 className="font-bold text-5xl">{"Blog Posts"}</h1>
         <h2 className="font-bold text-3xl flex items-center">
           <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">
-            {"What I've been reading"}
+            {"Articles I've written "}
           </span>
         </h2>
       </div>
@@ -56,11 +56,14 @@ export default function BlogPosts() {
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
         {" "}
         {articles.map((article) => (
-          <ProjectCard
-            key={article.id}
-            title={article.title}
-            image={article.cover_image}
-          />
+          <ScrollLayout>
+            <ProjectCard
+              key={article.id}
+              title={article.title}
+              image={article.cover_image}
+              url={article.url}
+            />
+          </ScrollLayout>
         ))}
       </div>
 

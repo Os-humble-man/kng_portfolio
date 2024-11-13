@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import darkbg from "../"
 export default {
   darkMode: 'class',
   content: [
@@ -8,15 +9,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Couleurs personnalisées
         primary: '#E0E8F6',
         secondary: '#BCE7FA',
         accent: '#4FC3F7',
         customGray: '#484E53',
         textColor: '#050505',
-        // Couleurs pour le mode sombre
-        darkPrimary: '#0a0505',  // Bleu très foncé pour le mode sombre
-        darkGray: '#1F2937', // Gris foncé pour le fond
+        darkPrimary: '#0a0505',
+        darkGray: '#1F2937',
         darkText: '#E1E1E1'
       },
       fontFamily: {

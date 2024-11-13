@@ -77,7 +77,7 @@ export default function Contact() {
   return (
     <div
       className="w-full bg-primary dark:bg-darkPrimary py-10 px-4 sm:px-8 md:px-12 lg:px-24"
-      id="resume"
+      id="contact"
     >
       <ScrollLayout>
         <div className="flex flex-col items-center gap-4 text-textColor dark:text-darkText font-monserrat">
