@@ -39,7 +39,7 @@ export default function About() {
               <img
                 src={profileImage}
                 alt="Profile"
-                className=" h-auto rounded-lg grayscale transition-all duration-300 hover:grayscale-0"
+                className=" h-auto rounded-lg  transition-all duration-300 hover:grayscale-0"
               />
             </motion.div>
           </div>
